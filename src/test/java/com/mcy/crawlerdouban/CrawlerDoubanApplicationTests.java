@@ -57,8 +57,7 @@ class CrawlerDoubanApplicationTests {
 
                 String url2 = json.getString("url");
                 Map<String, String> map2 = new HashMap<>();
-                Map<String, String> mapTitle2 = new HashMap<>();
-                String html2 = HttpUtils.doGetHtml(url2, map2, mapTitle2);
+                String html2 = HttpUtils.doGetHtml(url2, map2, mapTitle);
                 //解析HTML获取DOM对象
                 Document doc = Jsoup.parse(html2);
                 //获取导演名称
